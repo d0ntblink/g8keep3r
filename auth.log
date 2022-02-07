@@ -1,0 +1,107 @@
+Feb  6 00:47:01 test-target CRON[16114]: pam_unix(cron:session): session opened for user root by (uid=0)
+Feb  6 00:47:01 test-target CRON[16114]: pam_unix(cron:session): session closed for user root
+Feb  6 01:47:01 test-target CRON[16118]: pam_unix(cron:session): session opened for user root by (uid=0)
+Feb  6 01:47:01 test-target CRON[16118]: pam_unix(cron:session): session closed for user root
+Feb  6 02:47:01 test-target CRON[16127]: pam_unix(cron:session): session opened for user root by (uid=0)
+Feb  6 02:47:01 test-target CRON[16127]: pam_unix(cron:session): session closed for user root
+Feb  6 03:00:01 test-target CRON[16131]: pam_unix(cron:session): session opened for user root by (uid=0)
+Feb  6 03:00:01 test-target CRON[16131]: pam_unix(cron:session): session closed for user root
+Feb  6 03:47:01 test-target CRON[16137]: pam_unix(cron:session): session opened for user root by (uid=0)
+Feb  6 03:47:01 test-target CRON[16137]: pam_unix(cron:session): session closed for user root
+Feb  6 03:55:01 test-target CRON[16142]: pam_unix(cron:session): session opened for user root by (uid=0)
+Feb  6 03:55:01 test-target CRON[16142]: pam_unix(cron:session): session closed for user root
+Feb  6 04:47:01 test-target CRON[16145]: pam_unix(cron:session): session opened for user root by (uid=0)
+Feb  6 04:47:01 test-target CRON[16145]: pam_unix(cron:session): session closed for user root
+Feb  6 05:47:01 test-target CRON[16150]: pam_unix(cron:session): session opened for user root by (uid=0)
+Feb  6 05:47:01 test-target CRON[16150]: pam_unix(cron:session): session closed for user root
+Feb  6 06:32:01 test-target CRON[16154]: pam_unix(cron:session): session opened for user root by (uid=0)
+Feb  6 06:32:01 test-target CRON[16154]: pam_unix(cron:session): session closed for user root
+Feb  6 06:47:01 test-target CRON[16159]: pam_unix(cron:session): session opened for user root by (uid=0)
+Feb  6 06:47:01 test-target CRON[16159]: pam_unix(cron:session): session closed for user root
+Feb  6 06:56:01 test-target CRON[16213]: pam_unix(cron:session): session opened for user root by (uid=0)
+Feb  6 06:56:01 test-target CRON[16213]: pam_unix(cron:session): session closed for user root
+Feb  6 07:47:01 test-target CRON[16225]: pam_unix(cron:session): session opened for user root by (uid=0)
+Feb  6 07:47:01 test-target CRON[16225]: pam_unix(cron:session): session closed for user root
+Feb  6 08:47:01 test-target CRON[16230]: pam_unix(cron:session): session opened for user root by (uid=0)
+Feb  6 08:47:01 test-target CRON[16230]: pam_unix(cron:session): session closed for user root
+Feb  6 09:47:01 test-target CRON[16238]: pam_unix(cron:session): session opened for user root by (uid=0)
+Feb  6 09:47:01 test-target CRON[16238]: pam_unix(cron:session): session closed for user root
+Feb  6 10:47:01 test-target CRON[16243]: pam_unix(cron:session): session opened for user root by (uid=0)
+Feb  6 10:47:01 test-target CRON[16243]: pam_unix(cron:session): session closed for user root
+Feb  6 11:47:01 test-target CRON[16297]: pam_unix(cron:session): session opened for user root by (uid=0)
+Feb  6 11:47:01 test-target CRON[16297]: pam_unix(cron:session): session closed for user root
+Feb  6 12:47:01 test-target CRON[16302]: pam_unix(cron:session): session opened for user root by (uid=0)
+Feb  6 12:47:01 test-target CRON[16302]: pam_unix(cron:session): session closed for user root
+Feb  6 13:47:01 test-target CRON[16307]: pam_unix(cron:session): session opened for user root by (uid=0)
+Feb  6 13:47:01 test-target CRON[16307]: pam_unix(cron:session): session closed for user root
+Feb  6 14:47:01 test-target CRON[16311]: pam_unix(cron:session): session opened for user root by (uid=0)
+Feb  6 14:47:01 test-target CRON[16311]: pam_unix(cron:session): session closed for user root
+Feb  6 15:47:01 test-target CRON[16319]: pam_unix(cron:session): session opened for user root by (uid=0)
+Feb  6 15:47:01 test-target CRON[16319]: pam_unix(cron:session): session closed for user root
+Feb  6 16:47:01 test-target CRON[16323]: pam_unix(cron:session): session opened for user root by (uid=0)
+Feb  6 16:47:01 test-target CRON[16323]: pam_unix(cron:session): session closed for user root
+Feb  6 17:47:01 test-target CRON[16328]: pam_unix(cron:session): session opened for user root by (uid=0)
+Feb  6 17:47:01 test-target CRON[16328]: pam_unix(cron:session): session closed for user root
+Feb  6 18:47:01 test-target CRON[16333]: pam_unix(cron:session): session opened for user root by (uid=0)
+Feb  6 18:47:01 test-target CRON[16333]: pam_unix(cron:session): session closed for user root
+Feb  6 19:47:01 test-target CRON[16337]: pam_unix(cron:session): session opened for user root by (uid=0)
+Feb  6 19:47:01 test-target CRON[16337]: pam_unix(cron:session): session closed for user root
+Feb  6 20:47:01 test-target CRON[16344]: pam_unix(cron:session): session opened for user root by (uid=0)
+Feb  6 20:47:01 test-target CRON[16344]: pam_unix(cron:session): session closed for user root
+Feb  6 20:56:57 test-target sshd[16348]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.0.228  user=test
+Feb  6 20:56:59 test-target sshd[16348]: Failed password for test from 10.0.0.228 port 2054 ssh2
+Feb  6 20:57:08 test-target sshd[16348]: message repeated 2 times: [ Failed password for test from 10.0.0.228 port 2054 ssh2]
+Feb  6 20:57:10 test-target sshd[16348]: Connection closed by authenticating user test 10.0.0.228 port 2054 [preauth]
+Feb  6 20:57:10 test-target sshd[16348]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.0.228  user=test
+Feb  6 20:57:16 test-target sshd[16350]: Accepted password for test from 10.0.0.228 port 2056 ssh2
+Feb  6 20:57:16 test-target sshd[16350]: pam_unix(sshd:session): session opened for user test by (uid=0)
+Feb  6 20:57:16 test-target systemd-logind[110]: New session c12 of user test.
+Feb  6 20:57:16 test-target systemd: pam_unix(systemd-user:session): session opened for user test by (uid=0)
+Feb  6 21:07:41 test-target sudo: pam_unix(sudo:auth): Couldn't open /etc/securetty: No such file or directory
+Feb  6 21:07:44 test-target sudo: pam_unix(sudo:auth): Couldn't open /etc/securetty: No such file or directory
+Feb  6 21:07:52 test-target sudo:     test : TTY=pts/2 ; PWD=/home/test ; USER=root ; COMMAND=/usr/bin/tail -n 50 /var/log/auth.log
+Feb  6 21:07:52 test-target sudo: pam_unix(sudo:session): session opened for user root by test(uid=1000)
+Feb  6 21:07:52 test-target sudo: pam_unix(sudo:session): session closed for user root
+Feb  6 21:47:01 test-target CRON[16435]: pam_unix(cron:session): session opened for user root by (uid=0)
+Feb  6 21:47:01 test-target CRON[16435]: pam_unix(cron:session): session closed for user root
+Feb  6 22:47:01 test-target CRON[16446]: pam_unix(cron:session): session opened for user root by (uid=0)
+Feb  6 22:47:01 test-target CRON[16446]: pam_unix(cron:session): session closed for user root
+Feb  6 22:49:15 test-target su: pam_unix(su-l:auth): Couldn't open /etc/securetty: No such file or directory
+Feb  6 22:49:17 test-target su: pam_unix(su-l:auth): Couldn't open /etc/securetty: No such file or directory
+Feb  6 22:49:17 test-target su: pam_unix(su-l:auth): authentication failure; logname=test uid=1000 euid=0 tty=pts/2 ruser=test rhost=  user=root
+Feb  6 22:49:18 test-target su: FAILED SU (to root) test on pts/2
+Feb  6 22:49:23 test-target su: pam_unix(su-l:auth): Couldn't open /etc/securetty: No such file or directory
+Feb  6 22:49:25 test-target su: pam_unix(su-l:auth): Couldn't open /etc/securetty: No such file or directory
+Feb  6 22:49:25 test-target su: (to root) test on pts/2
+Feb  6 22:49:25 test-target su: pam_unix(su-l:session): session opened for user root by test(uid=1000)
+Feb  6 22:49:25 test-target systemd-logind[110]: New session c13 of user root.
+Feb  6 22:49:25 test-target systemd: pam_unix(systemd-user:session): session opened for user root by (uid=0)
+Feb  6 22:52:45 test-target sshd[16494]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.0.228  user=test
+Feb  6 22:52:46 test-target sshd[16494]: Failed password for test from 10.0.0.228 port 1988 ssh2
+Feb  6 22:52:56 test-target sshd[16494]: message repeated 2 times: [ Failed password for test from 10.0.0.228 port 1988 ssh2]
+Feb  6 22:52:56 test-target sshd[16494]: Connection closed by authenticating user test 10.0.0.228 port 1988 [preauth]
+Feb  6 22:52:56 test-target sshd[16494]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.0.228  user=test
+Feb  6 23:47:01 test-target CRON[16504]: pam_unix(cron:session): session opened for user root by (uid=0)
+Feb  6 23:47:01 test-target CRON[16504]: pam_unix(cron:session): session closed for user root
+Feb  7 00:42:15 test-target sshd[16557]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.0.228  user=test
+Feb  7 00:42:17 test-target sshd[16557]: Failed password for test from 10.0.0.228 port 2028 ssh2
+Feb  7 00:42:33 test-target sshd[16557]: message repeated 2 times: [ Failed password for test from 10.0.0.228 port 2028 ssh2]
+Feb  7 00:42:33 test-target sshd[16557]: Connection closed by authenticating user test 10.0.0.228 port 2028 [preauth]
+Feb  7 00:42:33 test-target sshd[16557]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.0.228  user=test
+Feb  7 00:47:01 test-target CRON[16561]: pam_unix(cron:session): session opened for user root by (uid=0)
+Feb  7 00:47:01 test-target CRON[16561]: pam_unix(cron:session): session closed for user root
+Feb  7 00:59:37 test-target sshd[16601]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.0.228  user=test
+Feb  7 00:59:39 test-target sshd[16601]: Failed password for test from 10.0.0.228 port 2032 ssh2
+Feb  7 00:59:48 test-target sshd[16601]: message repeated 2 times: [ Failed password for test from 10.0.0.228 port 2032 ssh2]
+Feb  7 00:59:49 test-target sshd[16601]: Connection closed by authenticating user test 10.0.0.228 port 2032 [preauth]
+Feb  7 00:59:49 test-target sshd[16601]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.0.228  user=test
+Feb  7 01:00:07 test-target sudo:     root : TTY=pts/2 ; PWD=/root ; USER=root ; COMMAND=./test.sh test
+Feb  7 01:00:07 test-target sudo: pam_unix(sudo:session): session opened for user root by test(uid=0)
+Feb  7 01:00:07 test-target sudo: pam_unix(sudo:session): session closed for user root
+Feb  7 01:16:15 test-target sshd[16652]: Accepted password for test from 10.0.0.228 port 2036 ssh2
+Feb  7 01:16:15 test-target sshd[16652]: pam_unix(sshd:session): session opened for user test by (uid=0)
+Feb  7 01:16:15 test-target systemd-logind[110]: New session c14 of user test.
+Feb  6 02:52:46 test-target sshd[16494]: Failed password for test from 10.0.0.228 port 1988 ssh2
+Feb  6 02:52:47 test-target sshd[16494]: Failed password for test from 10.0.0.228 port 1988 ssh2
+Feb  6 02:52:48 test-target sshd[16494]: Failed password for test from 10.0.0.228 port 1988 ssh2
+Feb  6 02:52:49 test-target sshd[16494]: Failed password for test from 10.0.0.228 port 1988 ssh2
