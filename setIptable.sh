@@ -1,0 +1,63 @@
+#!/bin/bash
+
+#This script is for set up and run ipTables
+#Start script 
+echo "***************************START SCRIPT*********************"
+
+#In case if user don't have pre-install iptable in the system.
+[[ iptables -v -L 2> /dev/null ]] || echo "please install iptables first
+
+#Check the status of iptable configuration 
+iptables -L -v
+
+echo "**************************************************"
+#clear the existing rule 
+iptables -F 
+
+echo "Deleted the existing rule"
+echo "**************************************************"
+
+#Allow local interface 
+iptables -A INPUT -i lo -j ACCEPT
+
+#Open the port to allow local connection 
+iptables -A INPUT -s 127.0.0.1 -j ACCEPT
+
+#Enabling Connections for http (80), https(443), ssh(22)
+
+iptables -A INPUT -p tcp --dport 22 - ACCEPT
+echo  "Enabling connection for SSH"
+iptables -A INPUT -p tcp --dport 80 - ACCEPT
+echo  "Enabling connection for http"
+iptables -A INPUT -p tcp --dport 443 - ACCEPT
+echo  "Enabling connection for https"
+
+#Reject all other traffic 
+iptables -A INPUT -j REJECT
+iptables -A FORWARD -j REJECT
+echo "Rejected all other traffic" 
+
+#Drop other all traffics to prevent unauthorized connection
+iptable -A INPUT -j DROP
+echo "Drop all other traffics" 
+
+#Firewall react to destination IP Address from other script.
+#Drop block destination IP Address use 'expire' method for 10 minutes
+#set up ipset to match against IP | timeout 0 means never expire
+ipset create temp_hosts hash:ip timeout 0
+iptables -I INPUT 1 -m set -j DROP --match-set temp_hosts src
+iptables -I FORWARD 1 -m set -j DROP --match-set temp_host src
+
+#Note timeout 600 = 10 minutes
+ipset add temp_hosts 1.1.1.2 timeout 600
+
+#save iptable settings
+/etc/init.d/iptables save 
+echo "*******Saved iptables**********"
+#restart iptable with new rule
+/etc/int.d./iptables restart
+echo "********Restart iptables*******"
+
+#Exit script 
+echo "*********************END SCRIPT**************"
+exit 
