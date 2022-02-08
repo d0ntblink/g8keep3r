@@ -13,11 +13,12 @@ print_error () {
 }
 
 removing_proc () {
+    username="$1"
     echo "removing $username from the watched list"
 }
 
 adding_proc () {
-    echo $username
+    username="$1"
     if  [ `grep -Fxq "$username" ./watch.list 2>/dev/null` ] ; then
         echo "this username is already being watched for"
         echo "to remove a user from the watchlist please use --remove <username>"
@@ -46,8 +47,6 @@ if [[ $# -lt 2 ]]; then
     echo "  g8keepr --remove <username>"
     exit 13
 fi
-
-username="$1"
 
 case "${1}" in
 	"")         print_help;;
