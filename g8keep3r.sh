@@ -14,7 +14,13 @@ print_error () {
 
 removing_proc () {
     username="$1"
-    echo "removing $username from the watched list"
+    if  grep -q "$username" $g8dir/watch.list 2>/dev/null; then
+        echo "removing $username from the watched list"
+        crontab -u root -l 2>/dev/null; grep -v "$username" | crontab -u root -
+    else
+        echo "$username was not being watched"
+        exit 17
+    fi
 }
 
 adding_proc () {
@@ -22,12 +28,12 @@ adding_proc () {
     if  grep -q "$username" $g8dir/watch.list 2>/dev/null; then
         echo "this username is already being watched for"
         echo "to remove a user from the watchlist please use --remove <username>"
-        exit 15
+        exit 16
     else
         # watchdog_cronfile="$username.g8keepr.parser.schedule"
         echo "$username" >> $g8dir/watch.list
         echo "watching $username"
-        sudo -u root crontab -l 2>/dev/null; echo "* * * * * sudo -u root bash $g8dir/parser.sh $username" | crontab -
+        crontab -u root -l 2>/dev/null; echo "* * * * * sudo -u root bash $g8dir/parser.sh $username" | crontab -u root -
         # echo "*  *  *  *  *    root    `pwd`/parser.sh $username" >> /etc/crontab
     fi
 }
