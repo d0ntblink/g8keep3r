@@ -26,7 +26,8 @@ awk -v username="$username" '
         }
     }
 }
-' "$g8dir/auth.log" > $tmpfile
+' "/var/log/auth.log" > $tmpfile
+# "$g8dir/auth.log" > $tmpfile
 
 while read line; do
     linedate=$(echo $line | awk '{print $1,$2,$3}') && linedate=$(date -d "$linedate" +%s)
