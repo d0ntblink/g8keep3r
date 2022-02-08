@@ -33,7 +33,7 @@ while read line; do
     linedate=$(echo $line | awk '{print $1,$2,$3}') && linedate=$(date -d "$linedate" +%s)
     ip=$(echo $line | awk '{print $4}') 
     declare -i intlinedate=$linedate
-    if [ $(expr $datern - $intlinedate) -gt 60 ]; then
+    if [ $(expr $datern - $intlinedate) -lt 60 ]; then
         maliciousips[$ip]+=x
     fi
 done < $tmpfile
