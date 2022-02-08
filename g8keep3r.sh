@@ -37,12 +37,7 @@ if [[ $EUID -gt 0 ]]; then
     exit 12
 fi
 
-if [ iptables -V ]; then
-    iptables -V
-else
-    echo "iptables is missing, aborting"
-    exit 16
-fi
+ ( iptables -V 2>/dev/null ) || ( echo "iptables is missing" && exit 16)
 
 if [[ $# -lt 2 ]]; then
     echo "this script requires a username as an argument"
