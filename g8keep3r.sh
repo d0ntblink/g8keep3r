@@ -18,6 +18,7 @@ removing_proc () {
 }
 
 adding_proc () {
+    echo $username
     if  [ `grep -Fxq "$username" ./watch.list 2>/dev/null` ] ; then
         echo "this username is already being watched for"
         echo "to remove a user from the watchlist please use --remove <username>"
