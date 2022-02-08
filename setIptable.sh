@@ -49,12 +49,5 @@ iptables -I FORWARD 1 -m set -j DROP --match-set temp_host src
 #Note timeout 600 = 10 minutes 120 = 2 minutes as test
 ipset add temp_hosts $iptoblock timeout 120
 
-#save iptable settings
-/etc/init.d/iptables save 
-# echo "*******Saved iptables**********"
-#restart iptable with new rule
-/etc/int.d./iptables restart
-# echo "********Restart iptables*******"
-
 #Exit script 
 # echo "*********************END SCRIPT**************"
