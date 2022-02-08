@@ -46,8 +46,8 @@ ipset create temp_hosts hash:ip timeout 0
 iptables -I INPUT 1 -m set -j DROP --match-set temp_hosts src
 iptables -I FORWARD 1 -m set -j DROP --match-set temp_host src
 
-#Note timeout 600 = 10 minutes
-ipset add temp_hosts $iptoblock timeout 600
+#Note timeout 600 = 10 minutes 120 = 2 minutes as test
+ipset add temp_hosts $iptoblock timeout 120
 
 #save iptable settings
 /etc/init.d/iptables save 
