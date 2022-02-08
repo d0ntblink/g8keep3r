@@ -42,7 +42,7 @@ for key in "${!maliciousips[@]}"; do
     if [[ $(echo -n "${maliciousips[$key]}" | wc -m) -gt 3 ]]; then
         echo -n "$ip got timedout for 10 minutes " >> $watchdogfile
         echo "on `date`" >> $watchdogfile
-        sudo -u root ipset add test $ip timeout 600
+        sudo -u root ipset add g8keep3r $ip timeout 600
     fi
 done
 

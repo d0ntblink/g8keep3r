@@ -48,7 +48,7 @@ fi
 ( iptables -V >/dev/null ) || ( echo "iptables is missing" && exit 16)
 ( sudo -u root ipset -v >/dev/null ) || ( echo "ipset is missing, install it and try again" && exit 16)
 sudo -u root ipset create g8keep3r hash:ip 2>/dev/null
-sudo -u root iptables -I INPUT -m set --match-set g8keep3r src -j DROP
+( sudo -u root iptables -L 2>/dev/null | grep g8keep3r ) || sudo -u root iptables -I INPUT -m set --match-set g8keep3r src -j DROP
 
 if [[ $# -lt 2 ]]; then
     echo "this script requires a username as an argument"
