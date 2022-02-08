@@ -1,5 +1,8 @@
 #!/bin/bash
 
+iptoblock="$1"
+
+
 #This script is for set up and run ipTables
 #Start script 
 # echo "***************************START SCRIPT*********************"
@@ -44,7 +47,7 @@ iptables -I INPUT 1 -m set -j DROP --match-set temp_hosts src
 iptables -I FORWARD 1 -m set -j DROP --match-set temp_host src
 
 #Note timeout 600 = 10 minutes
-ipset add temp_hosts 1.1.1.2 timeout 600
+ipset add temp_hosts $iptoblock timeout 600
 
 #save iptable settings
 /etc/init.d/iptables save 
