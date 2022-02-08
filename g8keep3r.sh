@@ -27,7 +27,7 @@ adding_proc () {
         # watchdog_cronfile="$username.g8keepr.parser.schedule"
         echo "$username" >> $g8dir/watch.list
         echo "watching $username"
-        sudo -u root crontab -l 2>/dev/null; echo "* * * * * $g8dir/parser.sh $username" | crontab -
+        sudo -u root crontab -l 2>/dev/null; echo "* * * * * sudo -u root bash $g8dir/parser.sh $username" | crontab -
         # echo "*  *  *  *  *    root    `pwd`/parser.sh $username" >> /etc/crontab
     fi
 }
