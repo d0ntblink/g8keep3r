@@ -13,7 +13,6 @@ print_error () {
 }
 
 removing_proc () {
-    username="$1"
     echo "removing $username from the watched list"
 }
 
@@ -24,7 +23,6 @@ adding_proc () {
         echo "to remove a user from the watchlist please use --remove <username>"
         exit 15
     else
-        username="$1"
         # watchdog_cronfile="$username.g8keepr.parser.schedule"
         echo "$username" >> ./watch.list
         echo "watching $username"
@@ -48,6 +46,8 @@ if [[ $# -lt 2 ]]; then
     echo "  g8keepr --remove <username>"
     exit 13
 fi
+
+username="$1"
 
 case "${1}" in
 	"")         print_help;;
