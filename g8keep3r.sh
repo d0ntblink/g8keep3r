@@ -24,7 +24,7 @@ adding_proc () {
         exit 15
     else
         username="$1"
-        watchdog_cronfile="$username.g8keepr.parser.schedule"
+        # watchdog_cronfile="$username.g8keepr.parser.schedule"
         echo "$username" >> ./watch.list
         echo "watching $username"
         ( crontab -l; echo "* * * * * `pwd`/parser.sh $username" ) | awk '!x[$0]++' |crontab -
@@ -37,7 +37,7 @@ if [[ $EUID -gt 0 ]]; then
     exit 12
 fi
 
-if [[ iptables -V >/dev/null ]]; then
+if [ iptables -V >/dev/null ]; then
     iptables -V
 else
     echo "iptables is missing, aborting"
