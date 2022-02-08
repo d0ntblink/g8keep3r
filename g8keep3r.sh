@@ -19,7 +19,7 @@ removing_proc () {
 
 adding_proc () {
     username="$1"
-    if  [[ $(grep -Fxq "$username" ./watch.list 2>/dev/null) ]]; then
+    if  grep -q "$username" ./watch.list 2>/dev/null; then
         echo "this username is already being watched for"
         echo "to remove a user from the watchlist please use --remove <username>"
         exit 15
@@ -27,17 +27,23 @@ adding_proc () {
         # watchdog_cronfile="$username.g8keepr.parser.schedule"
         echo "$username" >> ./watch.list
         echo "watching $username"
-        ( crontab -l; echo "* * * * * `pwd`/parser.sh $username" ) | awk '!x[$0]++' |crontab -
+        # ( crontab -l; echo "* * * * * `pwd`/parser.sh $username" ) | awk '!x[$0]++' |crontab -
         # echo "*  *  *  *  *    root    `pwd`/parser.sh $username" >> /etc/crontab
     fi
 }
+
+# if grep -q "search-string" filename; then
+#   echo "String found."
+# else
+#   echo "String not found."
+# fi
 
 if [[ $EUID -gt 0 ]]; then
     echo "This script must be run as root"
     exit 12
 fi
 
- ( iptables -V 2>/dev/null ) || ( echo "iptables is missing" && exit 16)
+ ( iptables -V >/dev/null ) || ( echo "iptables is missing" && exit 16)
 
 if [[ $# -lt 2 ]]; then
     echo "this script requires a username as an argument"
