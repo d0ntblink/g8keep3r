@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/d0ntblink/g8keep3r/master/extra/logo.png" width=40%>
+<img src="https://raw.githubusercontent.com/d0ntblink/g8keep3r/master/extra/logo.png" width=20%>
 
 
 # g8keep3r
