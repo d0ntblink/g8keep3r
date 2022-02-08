@@ -46,4 +46,4 @@ for key in "${!maliciousips[@]}"; do
     fi
 done
 
-rm -rf $tmpfile
+# rm -rf $tmpfile
