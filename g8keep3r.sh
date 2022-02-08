@@ -19,7 +19,7 @@ removing_proc () {
 
 adding_proc () {
     username="$1"
-    if  [ `grep -Fxq "$username" ./watch.list 2>/dev/null` ] ; then
+    if  [[ `grep -Fxq "$username" ./watch.list 2>/dev/null` ]]; then
         echo "this username is already being watched for"
         echo "to remove a user from the watchlist please use --remove <username>"
         exit 15
