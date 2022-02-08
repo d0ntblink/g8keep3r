@@ -5,8 +5,10 @@
 # line format : Feb 6 02:52:49 10.0.0.228
 
 username="$1"
-tmpfile="./tmp.$username.data.tmp"
-watchdogfile="./$username.data"
+g8dir="$(dirname "$(readlink -f "$0")")"
+
+tmpfile="$g8dir/tmp.$username.data.tmp"
+watchdogfile="$g8dir/$username.data"
 declare -i datern=$(date +%s)
 declare -A maliciousips=()
 
@@ -24,7 +26,7 @@ awk -v username="$username" '
         }
     }
 }
-' "./auth.log" > $tmpfile
+' "$g8dir/auth.log" > $tmpfile
 
 while read line; do
     linedate=$(echo $line | awk '{print $1,$2,$3}') && linedate=$(date -d "$linedate" +%s)

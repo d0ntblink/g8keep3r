@@ -19,24 +19,20 @@ removing_proc () {
 
 adding_proc () {
     username="$1"
-    if  grep -q "$username" ./watch.list 2>/dev/null; then
+    if  grep -q "$username" $g8dir/watch.list 2>/dev/null; then
         echo "this username is already being watched for"
         echo "to remove a user from the watchlist please use --remove <username>"
         exit 15
     else
         # watchdog_cronfile="$username.g8keepr.parser.schedule"
-        echo "$username" >> ./watch.list
+        echo "$username" >> $g8dir/watch.list
         echo "watching $username"
-        sudo -u root crontab -l 2>/dev/null; echo "* * * * * `pwd`/parser.sh $username" | crontab -
+        sudo -u root crontab -l 2>/dev/null; echo "* * * * * $g8dir/parser.sh $username" | crontab -
         # echo "*  *  *  *  *    root    `pwd`/parser.sh $username" >> /etc/crontab
     fi
 }
 
-# if grep -q "search-string" filename; then
-#   echo "String found."
-# else
-#   echo "String not found."
-# fi
+g8dir="$(dirname "$(readlink -f "$0")")"
 
 if [[ $EUID -gt 0 ]]; then
     echo "This script must be run as root"
