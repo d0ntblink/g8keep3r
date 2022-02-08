@@ -27,14 +27,21 @@ adding_proc () {
         watchdog_cronfile="$username.g8keepr.parser.schedule"
         echo "$username" >> ./watch.list
         echo "watching $username"
-        # (crontab -l; echo "* * * * * `pwd`/parser.sh $username # g8keepr for $username") | awk '!x[$0]++' |crontab -
-        echo "*  *  *  *  *    root    `pwd`/parser.sh $username" >> /etc/crontab
+        ( crontab -l; echo "* * * * * `pwd`/parser.sh $username" ) | awk '!x[$0]++' |crontab -
+        # echo "*  *  *  *  *    root    `pwd`/parser.sh $username" >> /etc/crontab
     fi
 }
 
 if [[ $EUID -gt 0 ]]; then
     echo "This script must be run as root"
     exit 12
+fi
+
+if [[ iptables -V >/dev/null ]]; then
+    iptables -V
+else
+    echo "iptables is missing, aborting"
+    exit 16
 fi
 
 if [[ $# -lt 2 ]]; then
