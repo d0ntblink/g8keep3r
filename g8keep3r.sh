@@ -37,7 +37,7 @@ if [[ $EUID -gt 0 ]]; then
     exit 12
 fi
 
-if [ iptables -V >/dev/null ]; then
+if [ iptables -V ]; then
     iptables -V
 else
     echo "iptables is missing, aborting"
