@@ -36,7 +36,7 @@ iptables -A FORWARD -j REJECT
 # echo "Rejected all other traffic" 
 
 #Drop other all traffics to prevent unauthorized connection
-iptable -A INPUT -j DROP
+iptables -A INPUT -j DROP
 # echo "Drop all other traffics" 
 
 #Firewall react to destination IP Address from other script.
