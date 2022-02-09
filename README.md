@@ -17,6 +17,6 @@ For more information about this program, you can find documents here
 
 [Manual](https://github.com/d0ntblink/g8keep3r/blob/master/extra/SSH%20Intrusion%20Detector%20User%20Manual.pdf)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7yJ08J4DYlo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Video showcase with my awesome and professional commentary](http://img.youtube.com/vi/7yJ08J4DYlo/0.jpg)](http://www.youtube.com/watch?v=7yJ08J4DYlo "g8keep3r")
 
 ~ All programmers are playwrights, and all computers are lousy actors. ~ 
