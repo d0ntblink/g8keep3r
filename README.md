@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/d0ntblink/g8keep3r/master/extra/logo.png" width=20%>
+<img src="https://raw.githubusercontent.com/d0ntblink/g8keep3r/master/Documents/logo.png" width=20%>
 
 
 # g8keep3r
@@ -9,13 +9,13 @@ The SSH Intrusion Detector program is a simple monitoring application that will 
 
 For more information about this program, you can find documents here
 
-[Intro](https://github.com/d0ntblink/g8keep3r/blob/master/extra/SSH%20Intrusion%20Detector.pdf)
+[Intro](https://github.com/d0ntblink/g8keep3r/blob/master/Documents/SSH%20Intrusion%20Detector.pdf)
 
-[Design](https://github.com/d0ntblink/g8keep3r/blob/master/extra/SSH%20Intrusion%20Detector%20Design.pdf)
+[Design](https://github.com/d0ntblink/g8keep3r/blob/master/Documents/SSH%20Intrusion%20Detector%20Design.pdf)
 
-[Testing](https://github.com/d0ntblink/g8keep3r/blob/master/extra/SSH%20Intrusion%20Detector%20Testing.pdf)
+[Testing](https://github.com/d0ntblink/g8keep3r/blob/master/Documents/SSH%20Intrusion%20Detector%20Testing.pdf)
 
-[Manual](https://github.com/d0ntblink/g8keep3r/blob/master/extra/SSH%20Intrusion%20Detector%20User%20Manual.pdf)
+[Manual](https://github.com/d0ntblink/g8keep3r/blob/master/Documents/SSH%20Intrusion%20Detector%20User%20Manual.pdf)
 
 [Video Showcase](https://www.youtube.com/watch?v=7yJ08J4DYlo)
 
