@@ -25,8 +25,8 @@ removing_proc () {
 
 adding_proc () {
     username="$1"
-    attempts="$2"
-    duration="$3"
+    attempts=$2
+    duration=$3
     if  grep -q "$username" $g8dir/watch.list 2>/dev/null; then
         echo "this username is already being watched for"
         echo "to remove a user from the watchlist please use --remove <username>"
@@ -64,7 +64,7 @@ fi
 
 case "${1}" in
 	"")         print_help;;
-    --add)     adding_proc "$2 $3 $4";;
+    --add)     adding_proc "$2" $3 $4;;
     --remove)     removing_proc "$2";;
     --help)   print_help;;
     *)          print_error;;
