@@ -47,11 +47,11 @@ if [[ $EUID -gt 0 ]]; then
     exit 12
 fi
 
-( iptables -V 2>/dev/null ) || ( echo "iptables is missing" && exit 16)
-( sudo -u root ipset -v 2>/dev/null ) || ( echo "ipset is missing, install it and try again" && exit 16)
-sudo -u root ipset create g8keep3r hash:ip timeout 0 2>/dev/null
+( iptables -V >/dev/null ) || ( echo "iptables is missing" && exit 16)
+( sudo -u root ipset -v >/dev/null ) || ( echo "ipset is missing, install it and try again" && exit 16)
+sudo -u root ipset create g8keep3r hash:ip timeout 0 >/dev/null
 # ipset create test hash:ip timeout 300
-( sudo -u root iptables -L 2>/dev/null | grep g8keep3r ) || sudo -u root iptables -I INPUT -m set --match-set g8keep3r src -j DROP
+( sudo -u root iptables -L >/dev/null | grep g8keep3r ) || sudo -u root iptables -I INPUT -m set --match-set g8keep3r src -j DROP
 
 if [[ $# -lt 2 ]]; then
     echo "this script requires a username as an argument"
