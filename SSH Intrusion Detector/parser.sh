@@ -5,6 +5,8 @@
 # line format : Feb 6 02:52:49 10.0.0.228
 
 username="$1"
+attempts="$2"
+duration="$3"
 g8dir="$(dirname "$(readlink -f "$0")")"
 
 tmpfile="$g8dir/tmp.$username.data.tmp"
@@ -39,10 +41,10 @@ while read line; do
 done < $tmpfile
 
 for key in "${!maliciousips[@]}"; do
-    if [[ $(echo -n "${maliciousips[$key]}" | wc -m) -gt 3 ]]; then
+    if [[ $(echo -n "${maliciousips[$key]}" | wc -m) -gt $attempts ]]; then
         echo -n "$ip got timedout for 10 minutes " >> $watchdogfile
         echo "on `date`" >> $watchdogfile
-        sudo -u root ipset add g8keep3r $ip timeout 600
+        sudo -u root ipset add g8keep3r $ip timeout $duration
     fi
 done
 
