@@ -5,8 +5,8 @@
 # line format : Feb 6 02:52:49 10.0.0.228
 
 username="$1"
-attempts="$2"
-duration="$3"
+attempts=$2
+duration=$3
 g8dir="$(dirname "$(readlink -f "$0")")"
 
 tmpfile="$g8dir/tmp.$username.data.tmp"
